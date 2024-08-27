@@ -1,0 +1,293 @@
+/* Enter your custom styles here */
+/* General Styles */
+.HeaderName {
+    margin: auto;
+    font-size: medium;
+    font-weight: bolder;
+}
+.SidePanelContent {
+    background-image: url('https://img.freepik.com/premium-photo/harbors-parking-area-accommodates-array-parked-trucks-vertical-mobile-wallpaper_896558-15728.jpg?w=360') !important;
+    width: 20%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ 
+.sapUiContentPadding1212 {
+    background-image: url('https://i.ibb.co/bPfN0wS/maxresdefault.jpg');
+}
+/* Button Styles */
+.SubmitBtnFromVendorPage .sapMBtnText {
+    background-color: white !important;
+    color: green;
+    margin-right: 0.5rem;
+    font-weight: bold !important;
+}
+ 
+.ClearBtnFromVendorPage .sapMBtnText {
+    background-color: white !important;
+    color: red;
+    font-weight: bold !important;
+}
+ 
+.hidden {
+    display: none;
+}
+ 
+/* Animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ 
+.slideDown {
+    display: flex;
+    animation: slideDown 0.5s ease-out;
+}
+ 
+/* Login Page Styles */
+.HomePageBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://i.ibb.co/N79Mgtf/58793ebf-1e00-17be-e434-bcf9334fbf4f-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    padding: 2rem;
+}
+ 
+.mainContainer.centered {
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-out;
+}
+ 
+.descriptionContainer {
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.5s ease-out;
+}
+ 
+.TextParkingLot {
+    color: rgb(30, 248, 230);
+    font-size: x-large;
+    font-style: oblique;
+}
+ 
+.ParkingSubtitle {
+    color: rgb(9, 231, 183);
+    font-size: medium;
+    font-style: normal;
+}
+ 
+.loginContainer {
+    background-color: rgba(119, 176, 240, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100% !important;
+    text-align: start;
+    margin: auto;
+    transition: all 0.5s ease-out;
+    margin-top: 6rem;
+    margin-left: 52rem;
+}
+ 
+.sapUiSmallMarginTop {
+    margin-top: 1rem;
+}
+ 
+.header {
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.568);
+}
+ 
+.logoTextContainer {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+ 
+.logoImage {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+ 
+/* Glass Effect for Welcome Text */
+.glassEffect {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect to create the frosted glass look */
+    border-radius: 5px; /* Rounded corners */
+    padding: 1rem 2rem; /* Padding inside the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border for additional effect */
+    color: white !important; /* White text color */
+    font-size: large; /* Larger font size for the welcome message */
+    text-align: start; /* Align text to the left */
+    width: fit-content; /* Box width based on content */
+    margin-top: 1rem; /* Space above the welcome box */
+    margin-left: 0.5rem; /* Space from the left edge */
+}
+ 
+.welcomeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    margin-top: 4rem; /* Space below the logo */
+}
+ 
+.welcomeText {
+    color: white;
+    font-size: larger;
+    font-style: italic;
+}
+ 
+.welcomeTextMessage12 {
+    color: white;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: medium;
+}
+ 
+.welcomeTextMessage13,
+.welcomeTextMessage14 {
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+ 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .SidePanelContent {
+        width: 30%;
+        height: 40%;
+    }
+ 
+    .loginContainer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+ 
+    .glassEffect {
+        font-size: medium;
+        padding: 0.5rem 1rem;
+        margin-top: 0.5rem;
+        margin-left: 0rem;
+    }
+}
+ 
+@media (max-width: 768px) {
+    .mainContainer {
+        margin-top: 2rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+ 
+    .descriptionContainer,
+    .loginContainer {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        margin-right: 1rem;
+    }
+ 
+    .descriptionContainer {
+        text-align: center;
+    }
+ 
+    .loginContainer {
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+ 
+    .logoImage {
+        width: 100px;
+    }
+ 
+    .glassEffect {
+        font-size: smaller;
+        padding: 0.5rem 1rem;
+        margin-left: 0.5rem;
+    }
+ 
+    .welcomeContainer {
+        margin-top: 2rem;
+    }
+ 
+    .TextParkingLot {
+        font-size: large;
+    }
+ 
+    .ParkingSubtitle {
+        font-size: small;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .SidePanelContent {
+        width: 100%;
+        height: 30%;
+    }
+ 
+    .loginContainer {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+        max-width: 100%;
+        margin-top: 17rem;
+    }
+ 
+    .descriptionContainer {
+        padding: 0.5rem;
+        text-align: center;
+    }
+ 
+    .TextParkingLot {
+        font-size: medium;
+    }
+ 
+    .ParkingSubtitle {
+        font-size: small;
+    }
+ 
+    .glassEffect {
+        font-size: smaller;
+        padding: 0.5rem 0.5rem;
+    }
+ 
+    .welcomeContainer {
+        margin-top: 1rem;
+    }
+ 
+    .logoImage {
+        width: 80px;
+    }
+}
+ 
+.onForgotPassword {
+    color: white !important;
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+}
+ 
+.onSignupClassBtn .sapMBtnText {
+    background-color: transparent !important;
+    color: white;
+    border-color: transparent !important;
+}
+
+.DialogClass{
+    background-color: aliceblue;
+}
