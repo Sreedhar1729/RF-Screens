@@ -65,8 +65,9 @@ sap.ui.define([
             },
             /**Getting Signup form Details*/
             onSubmitPress: function () {
-                debugger
+                 
                 var oArea = this.byId("_IDGenComboBox1").getSelectedKey();
+                /**here OArea may be inbound,outbound or Internal based on OArea we get the values */
                 var oItem;
                 if (oArea === 'Inbound') {
                     oItem = this.byId("_IDGenComboBox2").getSelectedKey();
