@@ -291,3 +291,65 @@
 .DialogClass{
     background-color: aliceblue;
 }
+
+.sapUiSmallMargin{
+    border: 1cm;
+}
+.boxContainer {
+    border-radius: 1rem;
+    border: 2px solid black; /* Add border width, style, and color */
+    padding: 3%;
+    width:35%
+}
+.dropdown{
+    width: 100%;
+}
+
+.queueDropdownContainer {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Center items vertically */
+}
+
+/* Additional class to add gap between label and dropdown */
+.queueDropdownContainer label {
+    margin-right: 3.3rem; /* Adjust the margin as needed to control the gap */
+}
+
+/* Custom class to increase the size of the Select element */
+.customSelect {
+    width: 100%;  /* Adjust width as needed */
+    height: 2.5rem; /* Adjust height as needed */
+}
+
+/* Optional: Adjust styling of the Select dropdown */
+.customSelect .sapMSelect {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem; /* Adjust font size if needed */
+}
+.Inputs{
+    width:100%
+}
+/* @media only screen and (max-width:600px){
+    .Inputs{
+        width:80vw ;
+    }
+
+} */
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+   
+    .boxContainer {
+        border-radius: 1rem;
+        border: 2px solid black; /* Add border width, style, and color */
+        padding: 3%;
+        width:80%;
+    }
+    .Inputs{
+        padding-left: 10vw;
+        width: 70%;
+    }
+  
+}

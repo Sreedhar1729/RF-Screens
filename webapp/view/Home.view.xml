@@ -9,6 +9,15 @@
         showHeader="false"
         class="HomePageBackground"
     >
+    <!-- <headerContent>
+            <ToolbarSpacer id="idttool" />
+            <Button
+                id="iddbbuu"
+                text="Reservation"
+                press="onReservePress"
+                type="Negative"
+            />
+        </headerContent> -->
         <VBox id="idVBox1">
             <HBox
                 id="idHbox1"
@@ -128,6 +137,7 @@
                                     class="ClearBtnFromVendorPage"
                                     press="onClearPress"
                                 />
+                                <Button id="idbuttonse" text="Admin" type="Emphasized" press="onAdmin"/>
                             </HBox>
                         </content>
                     </Panel>

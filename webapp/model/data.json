@@ -1,0 +1,23 @@
+{
+	"selectedKey": "page1",
+	"navigation": [
+		{
+			"title": "Home",
+			"icon": "sap-icon://home",
+			"key": "page1"
+			
+		},
+		{
+			"title": "User information",
+			"icon": "sap-icon://employee-lookup",
+			"key": "page2"
+			
+		},
+		{
+			"title": "Requested Data",
+			"icon": "sap-icon://employee-lookup",
+			"key": "page3"
+			
+		}
+    ]
+}

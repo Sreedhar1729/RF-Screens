@@ -1,0 +1,680 @@
+<mvc:View
+    controllerName="com.app.rfscreens.controller.Admin"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+>
+    <tnt:ToolPage id="toolPage">
+        <tnt:header>
+            <tnt:ToolHeader id="idtntToolHeader">
+                <Button
+                    id="sideNavigationToggleButton"
+                    icon="sap-icon://menu2"
+                    type="Transparent"
+                    press=".onSideNavButtonPress"
+                >
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="idOverflowToolbarLayoutData"
+                            priority="NeverOverflow"
+                        />
+                    </layoutData>
+                </Button>
+                <Title
+                    text="Admin Page"
+                    level="H1"
+                    id="idPageTitle"
+                    width="auto"
+                    textAlign="Center"
+                />
+
+                <tnt:ToolHeaderUtilitySeparator
+                    id="idToolHeaderUtilitySeparator"
+                />
+                <ToolbarSpacer id="idToolbarSpacer">
+                    <layoutData>
+                        <OverflowToolbarLayoutData
+                            id="idOverflowToolbarLayoutData1"
+                            priority="NeverOverflow"
+                            minWidth="20px"
+                        />
+                    </layoutData>
+                </ToolbarSpacer>
+                <Button id="idbell" icon="sap-icon://bell"  press="onBell"/>
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation
+                id="idSideNavigation"
+                expanded="true"
+                selectedKey="{/selectedKey}"
+                itemSelect=".onItemSelect"
+            >
+                <tnt:NavigationList
+                    items="{path:'/navigation', templateShareable:true }"
+                    id="idNavigationList"
+                >
+                    <tnt:NavigationListItem
+                        id="idNavigationListItem"
+                        text="{title}"
+                        icon="{icon}"
+                        enabled="{enabled}"
+                        expanded="{expanded}"
+                        items="{path:'items', templateShareable:true}"
+                        key="{key}"
+                    >
+                        <tnt:NavigationListItem
+                            id="idNavigationListItem1"
+                            text="{title}"
+                            key="{key}"
+                            enabled="{enabled}"
+                        />
+                    </tnt:NavigationListItem>
+                </tnt:NavigationList>
+                <tnt:fixedItem>
+                    <tnt:NavigationList
+                        id="idNavigationList3"
+                        items="{path: '/fixedNavigation', templateShareable:true}"
+                    >
+                        <tnt:NavigationListItem
+                            id="idNavigationListItem3"
+                            text="{title}"
+                            icon="{icon}"
+                            
+                        />
+                    </tnt:NavigationList>
+                </tnt:fixedItem>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <NavContainer
+                id="pageContainer"
+                initialPage="page1"
+            >
+                <pages>
+                    <ScrollContainer
+                        id="page1"
+                        horizontal="true"
+                        vertical="false"
+                        height="100%"
+                        class="sapUiContent"
+                    >
+                        <VBox
+                            id="idAssignslots"
+                            class="sapUiSmallMargin boxContainer"
+
+                        >
+                            <Title
+                                id="_IDHeadLabel"
+                                text="Admin page"
+                                class="sapUiSmallMarginTopHeading"
+                            />
+
+                            <FlexBox
+                                id="_IDField1"
+                                justifyContent="SpaceBetween"
+                                alignItems="Center"
+                                class="sapUiSmallMarginTop"
+                            >
+                                <Label
+                                    id="idempID"
+                                    text="Employee ID:"
+                                    labelFor="idEmppInput"
+                                    required="true"
+                                />
+                                <Input
+                                    id="idEmppInput"
+                                    placeholder="Enter Employee ID"
+                                    class="Inputs"
+                                />
+                            </FlexBox>
+
+                            <FlexBox
+                                id="_IDField2"
+                                justifyContent="SpaceBetween"
+                                alignItems="Center"
+                                class="sapUiSmallMarginTop"
+                            >
+                                <Label
+                                    id="idArea"
+                                    text="Area:" 
+                                    labelFor="idAreaInput"
+                                    required="true"
+                                />
+                                <Input
+                                    id="idAreaInput"
+                                    placeholder="Enter Area"
+                                    class="Inputs"
+
+                                />
+                            </FlexBox>
+
+                            <FlexBox
+                                id="_IDField33"
+                                justifyContent="SpaceBetween"
+                                alignItems="Center"
+                                class="sapUiSmallMarginTop"
+                            >
+                                <Label
+                                    id="idGroup"
+                                    text="Group:"
+                                    labelFor="idGroupInput"
+                                    required="true"
+                                />
+
+                                <Input
+                                    id="idGroupInput"
+                                    placeholder="Enter Group"
+                                    class="Inputs"
+
+                                />
+                            </FlexBox>
+                            <FlexBox
+                                id="_IDField4"
+                                justifyContent="SpaceBetween"
+                                alignItems="Center"
+                                class="sapUiSmallMarginTop"
+                            >
+                                <Label
+                                    id="idName"
+                                    text="Name:"
+                                    labelFor="idNameInput"
+                                    required="true"
+                                />
+
+                                <Input
+                                    id="idNameInput"
+                                    placeholder="Enter Name"
+                                    class="Inputs"
+
+                                />
+                            </FlexBox>
+                            <FlexBox
+                                id="_IDField3"
+                                justifyContent="SpaceBetween"
+                                alignItems="Center"
+                                class="sapUiSmallMarginTop"
+                            >
+                                <Label
+                                    id="idEmail"
+                                    text="Email:"
+                                    labelFor="idEmailInput"
+                                    required="true"
+                                />
+
+                                <Input
+                                    id="idEmailInput"
+                                    placeholder="Enter Email"
+                                    class="Inputs"
+
+                                />
+                            </FlexBox>
+                            <FlexBox
+                                id="_IDField36"
+                                justifyContent="SpaceBetween"
+                                alignItems="Center"
+                                class="sapUiSmallMarginTop"
+                            >
+                                <Label
+                                    id="idPhone"
+                                    text="Phone:"
+                                    labelFor="idPhoneInput"
+                                    required="true"
+                                />
+
+                                <Input
+                                    id="idPhoneInput"
+                                    placeholder="Enter Phone"
+                                    class="Inputs"
+
+                                />
+                            </FlexBox>
+                            <FlexBox
+                                id="_IDField34"
+                                justifyContent="SpaceBetween"
+                                alignItems="Center"
+                                class="sapUiSmallMarginTop"
+                            >
+                                <Label
+                                    id="idQueue"
+                                    text="Queue:"
+                                    labelFor="idQueueSelect"
+                                    required="true"
+                                />
+
+                                <!-- <ComboBox id="idParkingLotSelect" width="90%">
+                                    <core:Item id="idItem" />
+                                </ComboBox> -->
+
+                                <Select
+                                    class="Inputs"
+                                    id="parkingLotSelect"
+                                    width="11rem"
+                                    selectedKey=""
+                                
+
+                                >
+                                    <core:Item
+                                        id="_IDGenItem4"
+                                        key=""
+                                        text=""
+                                    />
+                                </Select>
+                            </FlexBox>
+
+                            <FlexBox
+                                id="_IDField6"
+                                justifyContent="Center"
+                                class="sapUiSmallMarginTop"
+                            >
+                                <Button
+                                    id="idButtonApprove"
+                                    text="Approve"
+                                    type="Success"
+                                    press="onApprovePress"
+                                    class="SubmitBtnFromVendorPage"
+                                    width="auto"
+                                />
+                                <ToolbarSpacer
+                                    id="toolspacer"
+                                    width="10px"
+                                />
+                                <Button
+                                    id="idButtonReject"
+                                    text="Reject"
+                                    type="Reject"
+                                    press="onResetPress"
+                                    class="ClearBtnFromVendorPage"
+                                    width="auto"
+                                />
+                            </FlexBox>
+
+                            <Label id="idEmptyRow" />
+                        </VBox>
+                    </ScrollContainer>
+
+                    <ScrollContainer
+                        id="page2"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                        <Table
+                            id="idUsersInformationTable"
+                            mode="MultiSelect"
+                            alternateRowColors="true"
+                            growingScrollToLoad="true"
+                            popinLayout="Block"
+                        >
+                            <headerToolbar>
+                                <OverflowToolbar id="idUsersInfoHeader">
+                                    <Title
+                                        id="idUsersInfoTitle"
+                                        text="Total Users:"
+                                    />
+                                    <ToolbarSpacer
+                                        id="idUsersInfoToolbarSpacer"
+                                    />
+                                    <SearchField
+                                        id="idonSearchBtn"
+                                        width="20%"
+                                        liveChange="onSearch"
+                                    >
+                                        <layoutData>
+                                            <OverflowToolbarLayoutData
+                                                id="idToolbarLayoutData"
+                                                priority="NeverOverflow"
+                                            />
+                                        </layoutData>
+                                    </SearchField>
+                                    <Button
+                                        id="idBtnCreate"
+                                        icon="sap-icon://add"
+                                        tooltip="Create New User"
+                                        type="Success"
+                                        press="onCreateUserBtnPress"
+                                    />
+                                    <Button
+                                        id="idBtnEdit"
+                                        icon="sap-icon://edit"
+                                        tooltip="Edit User Info"
+                                        type="Emphasized"
+                                        press="onUpdateUserBtnPress"
+                                    />
+                                    <Button
+                                        id="idBtndelete"
+                                        icon="sap-icon://delete"
+                                        tooltip="Delete User Info"
+                                        type="Reject"
+                                        press="onDeleteUserBtnPress"
+                                    />
+                                </OverflowToolbar>
+                            </headerToolbar>
+                            <columns>
+                                <Column
+                                    id="idEmpIdCol"
+                                    width="15%"
+                                >
+                                    <Title
+                                        id="idEmpIdTitle"
+                                        text="Employee Id"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idEmpNameCol"
+                                    width="20%"
+                                >
+                                    <Title
+                                        id="idEmpNameTitle"
+                                        text="Employee Name"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idAreaCol"
+                                    width="10%"
+                                >
+                                    <Title
+                                        id="idAreaColTitle"
+                                        text="Area"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idGroupCol"
+                                    width="10%"
+                                >
+                                    <Title
+                                        id="idGroupTitle"
+                                        text="Group"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idResourceTypeCol"
+                                    width="18%"
+                                >
+                                    <Title
+                                        id="idResourceTypeTitle"
+                                        text="Resource Type"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idEmailCol"
+                                    width="10%"
+                                >
+                                    <Title
+                                        id="idEmailTitle"
+                                        text="Email"
+                                    />
+                                </Column>
+
+                                <Column
+                                    id="idPhoneNoCol"
+                                    width="15%"
+                                >
+                                    <Title
+                                        id="idPhoneNoTitle"
+                                        text="Phone Number"
+                                    />
+                                </Column>
+
+                                <Column
+                                    id="idPasswordCol"
+                                    width="13%"
+                                >
+                                    <Title
+                                        id="idPasswordTitle"
+                                        text="Password"
+                                    />
+                                </Column>
+
+                                <Column
+                                    id="idQueueCol"
+                                    width="10%"
+                                >
+                                    <Title
+                                        id="idQueueTitle"
+                                        text="Queue"
+                                    />
+                                </Column>
+
+                                <Column
+                                    id="idExpiredDateCol"
+                                    width="15%"
+                                >
+                                    <Title
+                                        id="idExpiredDateTitle"
+                                        text="Expired Date"
+                                    />
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="idEmpIdColListItem">
+                                    <cells>
+                                        <Text
+                                            id="idEmpIdValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idEmpNameColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idAreaColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idGroupColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idResourceTypeColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idEmailColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idPhoneNoColValue"
+                                            text=""
+                                        />
+
+                                        <Text
+                                            id="idPasswordColValue"
+                                            text=""
+                                        />
+
+                                        <Text
+                                            id="idUserQueueColValue1"
+                                            text=""
+                                        />
+
+                                        <Text
+                                            id="idExpiredDateColValue"
+                                            text=""
+                                        />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </ScrollContainer>
+                    <ScrollContainer
+                        id="page3"
+                        horizontal="false"
+                        vertical="true"
+                        height="100%"
+                        class="sapUiContentPadding"
+                    >
+                        <Table
+                            id="idRequestDataTable"
+                            mode="MultiSelect"
+                            alternateRowColors="true"
+                            growingScrollToLoad="true"
+                        >
+                            <headerToolbar>
+                                <OverflowToolbar id="idUsersInfoHeade">
+                                    <Title
+                                        id="idUsersInfoTitl"
+                                        text="Requested Users Data:"
+                                    />
+                                    <ToolbarSpacer
+                                        id="idUsersInfoToolbarSpace"
+                                    />
+                                    <SearchField
+                                        id="idonSearchBt"
+                                        width="20%"
+                                        liveChange="onSearch"
+                                    >
+                                        <layoutData>
+                                            <OverflowToolbarLayoutData
+                                                id="idToolbarLayoutDat"
+                                                priority="NeverOverflow"
+                                            />
+                                        </layoutData>
+                                    </SearchField>
+
+                                    <Button
+                                        id="idBtnEdi"
+                                        tooltip="Reject"
+                                        text="Reject"
+                                        type="Reject"
+                                        press="onUpdateUserBtnPress"
+                                    />
+                                </OverflowToolbar>
+                            </headerToolbar>
+
+                            <columns>
+                                <Column
+                                    id="idRDEmpIdCol"
+                                    width="15%"
+                                >
+                                    <Title
+                                        id="idRDEmpIdTitle"
+                                        text="Employee Id"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idRDEmpNameCol"
+                                    width="20%"
+                                >
+                                    <Title
+                                        id="idRDEmpNameTitle"
+                                        text="Employee Name"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idRDAreaCol"
+                                    width="10%"
+                                >
+                                    <Title
+                                        id="idRDAreaColTitle"
+                                        text="Area"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idRDGroupCol"
+                                    width="10%"
+                                >
+                                    <Title
+                                        id="idRDGroupTitle"
+                                        text="Group"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idRDResourceTypeCol"
+                                    width="18%"
+                                >
+                                    <Title
+                                        id="idRDResourceTypeTitle"
+                                        text="Resource Type"
+                                    />
+                                </Column>
+                                <Column
+                                    id="idRDEmailCol"
+                                    width="10%"
+                                >
+                                    <Title
+                                        id="idRDEmailTitle"
+                                        text="Email"
+                                    />
+                                </Column>
+
+                                <Column
+                                    id="idRDPhoneNoCol"
+                                    width="15%"
+                                >
+                                    <Title
+                                        id="idRDPhoneNoTitle"
+                                        text="Phone Number"
+                                    />
+                                </Column>
+
+                                <Column
+                                    id="idPasswordCol1"
+                                    width="13%"
+                                >
+                                    <Title
+                                        id="idPasswordTitl1e"
+                                        text="Password"
+                                    />
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem id="idRDEmpIdColListItem">
+                                    <cells>
+                                        <Text
+                                            id="idRDEmpIdValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idRDEmpNameColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idRDAreaColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idRDGroupColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idRDResourceTypeColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idRDEmailColValue"
+                                            text=""
+                                        />
+                                        <Text
+                                            id="idRDPhoneNoColValue"
+                                            text=""
+                                        />
+
+                                        <Text
+                                            id="idRDPasswordColValue"
+                                            text=""
+                                        />
+
+                                        <Text
+                                            id="idUserQueueColValue"
+                                            text=""
+                                        />
+
+                                        <Text
+                                            id="idRDExpiredDateColValue"
+                                            text=""
+                                        />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </ScrollContainer>
+                </pages>
+            </NavContainer>
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

@@ -110,7 +110,10 @@ sap.ui.define([
                         MessageBox.error("Error");
                     }
                 })
-
+            },
+            /**Admin page Navigation */
+            onAdmin:function(){
+                this.getOwnerComponent().getRouter().navTo("RouteAdmin");
             }
         });
     });
